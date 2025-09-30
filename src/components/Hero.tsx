@@ -6,10 +6,26 @@ const Hero = () => {
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-20 left-10 w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
-        <div className="absolute top-40 right-20 w-1 h-1 bg-purple-500 rounded-full animate-pulse delay-1000"></div>
+        <div className="absolute top-20 left-10 w-1 h-3 bg-purple-400 rounded-full animate-pulse"></div>
+        <div className="absolute top-60 left-40 w-3 h-1 bg-green-400 rounded-full animate-pulse delay-1500"></div>
+        <div className="absolute top-80 left-80 w-2 h-3 bg-cyan-400 rounded-full animate-pulse delay-1500"></div>
+        
+        <div className="absolute top-40 right-20 w-1 h-3 bg-purple-500 rounded-full animate-pulse delay-1000"></div>
+        <div className="absolute top-80 right-60 w-2 h-3 bg-purple-500 rounded-full animate-pulse delay-2000"></div>
+        <div className="absolute top-60 right-80 w-2 h-3 bg-green-500 rounded-full animate-pulse delay-1500"></div>
+        
         <div className="absolute bottom-20 left-20 w-3 h-3 bg-green-400 rounded-full animate-pulse delay-2000"></div>
-        <div className="absolute top-60 left-1/3 w-1 h-1 bg-yellow-400 rounded-full animate-pulse delay-3000"></div>
+        <div className="absolute bottom-60 left-80 w-3 h-3 bg-cyan-400 rounded-full animate-pulse delay-1500"></div>
+        <div className="absolute bottom-80 left-40 w-2 h-3 bg-purple-400 rounded-full animate-pulse delay-1000"></div>
+
+        <div className="absolute bottom-20 right-40 w-3 h-3 bg-green-400 rounded-full animate-pulse delay-2000"></div>
+        <div className="absolute bottom-60 right-60 w-1 h-1 bg-yellow-400 rounded-full animate-pulse delay-1500"></div>
+        <div className="absolute bottom-80 right-20 w-2 h-3 bg-purple-400 rounded-full animate-pulse delay-1000"></div>
+        
+        <div className="absolute top-60 right-1/3 w-1 h-2 bg-purple-400 rounded-full animate-pulse"></div>
+        <div className="absolute top-60 left-1/3 w-2 h-2 bg-yellow-400 rounded-full animate-pulse delay-3000"></div>
+        <div className="absolute bottom-60 left-1/3 w-3 h-2 bg-purple-400 rounded-full animate-pulse delay-2000"></div>
+        <div className="absolute bottom-60 right-1/3 w-3 h-2 bg-purple-400 rounded-full animate-pulse delay-1000"></div>
       </div>
 
       <div className="text-center z-10 px-4">
@@ -35,7 +51,7 @@ const Hero = () => {
 
         <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-8">
           <div className="text-gray-400 font-mono">
-            <span className="text-cyan-400">languages:</span> [Go, Node.js, Python, TypeScript]
+            <span className="text-cyan-400">languages:</span> [Go, React.js, Vue.js, Node.js, TypeScript, Python]
           </div>
           <div className="text-gray-400 font-mono">
             <span className="text-purple-400">experience:</span> 5+ years
@@ -80,7 +96,7 @@ const Hero = () => {
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
         <div className="w-6 h-10 border-2 border-cyan-400/50 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-cyan-400 rounded-full mt-2 animate-bounce"></div>
+          <div className="w-1 h-3 bg-purple-400 rounded-full mt-2 animate-bounce"></div>
         </div>
       </div>
     </section>

@@ -32,7 +32,7 @@ const Contact = () => {
             <span className="text-green-400">Connect</span>
           </h2>
           <p className="text-gray-400 text-lg">
-            <span className="text-cyan-400 font-mono">$</span> initiate_collaboration --mode=rebel
+            <span className="text-cyan-400 font-mono">$</span> initiate_collaboration --mode=engineer
           </p>
           <div className="w-20 h-1 bg-gradient-to-r from-cyan-400 to-purple-500 mx-auto mt-4"></div>
         </div>
@@ -43,7 +43,7 @@ const Contact = () => {
             <div>
               <h3 className="text-2xl font-bold text-white mb-6">Get In Touch</h3>
               <p className="text-gray-300 text-lg leading-relaxed mb-8">
-                Looking for a lead engineer with expertise in distributed systems and cloud architecture?
+                Looking for a senior engineer with expertise in distributed systems and cloud architecture?
                 Whether you need someone to optimize your infrastructure, build scalable microservices,
                 or lead technical initiatives, let's connect and discuss how I can help.
               </p>

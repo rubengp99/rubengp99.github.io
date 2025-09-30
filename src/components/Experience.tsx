@@ -4,9 +4,18 @@ import { Calendar, MapPin, TrendingUp } from 'lucide-react';
 const Experience = () => {
   const experiences = [
     {
-      title: 'Lead Engineer',
+      title: 'Career Break & Freelancing',
+      company: 'N/A',
+      location: 'Nueva Esparta, Venezuela',
+      period: 'Dec 2024 - Present',
+      description: 'Career break to focus on physical & mental health as well as finding passions outside of the tech world for a couple of months. Currently exploring new career opportunities.',
+      achievements: [],
+      technologies: []
+    },
+    {
+      title: 'Lead Engineer (Full-Time)',
       company: 'Cadana',
-      location: 'Remote',
+      location: 'Nueva Esparta, Venezuela (Remote)',
       period: 'Jun 2021 - Dec 2024',
       description: 'Led engineering initiatives at a fintech startup, driving technical excellence and delivering innovative financial products.',
       achievements: [
@@ -16,12 +25,12 @@ const Experience = () => {
         'Built and launched a virtual card product with AML-focused rules, enhancing fraud prevention and customer fund security',
         'Delivered an end-to-end Web3 U.S. equity investment product, expanding the company\'s fintech capabilities'
       ],
-      technologies: ['Go', 'AWS', 'DynamoDB', 'Microservices', 'TDD', 'Web3']
+      technologies: ['Go', 'Vue.js', 'Python', 'Node.js', 'AWS', 'S3', 'Kinesis', 'Lambda', 'IaC', 'TDD', 'CI/CD']
     },
     {
-      title: 'Software Engineer',
+      title: 'Software Engineer (Full-Time)',
       company: 'Esusu',
-      location: 'Remote',
+      location: 'Nueva Esparta, Venezuela (Remote)',
       period: 'May 2020 - Jun 2021',
       description: 'Developed scalable solutions for fintech platform focused on rent reporting and credit building.',
       achievements: [
@@ -30,12 +39,12 @@ const Experience = () => {
         'Built an MVP admin UI, reducing operations\' reliance on developers',
         'Hardened platform resiliency with retry flows and optimized MongoDB cluster usage'
       ],
-      technologies: ['Node.js', 'MongoDB', 'React.js', 'TypeScript', 'AWS']
+      technologies: ['Go', 'React.js', 'Node.js', 'MongoDB', 'TypeScript', 'AWS', 'S3', 'Kinesis', 'Lambda', 'IaC']
     },
     {
-      title: 'Project Manager',
+      title: 'Project Manager (Contract)',
       company: 'Somos Sistemas',
-      location: 'Remote',
+      location: 'Nueva Esparta, Venezuela (Remote)',
       period: 'Feb 2020 - Aug 2020',
       description: 'Led cloud migration and product development initiatives for ERP solutions.',
       achievements: [
@@ -43,7 +52,7 @@ const Experience = () => {
         'Directed cloud migration from on-premises to cloud hosting, improving scalability, reliability, and maintenance',
         'Led the team to design and implement a CRM extension of the ERP product in 2 months, enabling organization-wide business intelligence and accelerating data-driven decision-making'
       ],
-      technologies: ['Project Management', 'Cloud Migration', 'ERP', 'CRM']
+      technologies: ['Vue.js', 'Node.js', 'TypeScript', 'MySQL', 'Project Management', 'Cloud Migration', 'ERP', 'CRM']
     }
   ];
 
@@ -91,34 +100,38 @@ const Experience = () => {
 
                   <p className="text-gray-300 mb-6 leading-relaxed">{exp.description}</p>
 
-                  <div className="mb-6">
-                    <h5 className="text-white font-semibold mb-3 flex items-center">
-                      <TrendingUp className="mr-2 text-green-400" size={20} />
-                      Key Achievements
-                    </h5>
-                    <ul className="space-y-2">
-                      {exp.achievements.map((achievement, idx) => (
-                        <li key={idx} className="text-gray-300 flex items-start">
-                          <span className="text-cyan-400 mr-3 mt-1">▶</span>
-                          {achievement}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div>
-                    <h5 className="text-white font-semibold mb-3">Technologies Used</h5>
-                    <div className="flex flex-wrap gap-2">
-                      {exp.technologies.map((tech, idx) => (
-                        <span
-                          key={idx}
-                          className="px-3 py-1 bg-black/50 border border-gray-600 rounded-full text-sm text-gray-300 hover:border-cyan-400 hover:text-cyan-400 transition-all duration-300"
-                        >
-                          {tech}
-                        </span>
-                      ))}
+                  {exp.achievements.length > 0 &&
+                    <div className="mb-6">
+                      <h5 className="text-white font-semibold mb-3 flex items-center">
+                        <TrendingUp className="mr-2 text-green-400" size={20} />
+                        Key Achievements
+                      </h5>
+                      <ul className="space-y-2">
+                        {exp.achievements.map((achievement, idx) => (
+                          <li key={idx} className="text-gray-300 flex items-start">
+                            <span className="text-cyan-400 mr-3 mt-1">⭐</span>
+                            {achievement}
+                          </li>
+                        ))}
+                      </ul>
                     </div>
-                  </div>
+                  }
+
+                  {exp.technologies.length > 0 &&
+                    <div>
+                      <h5 className="text-white font-semibold mb-3">Technologies Used</h5>
+                      <div className="flex flex-wrap gap-2">
+                        {exp.technologies.map((tech, idx) => (
+                          <span
+                            key={idx}
+                            className="px-3 py-1 bg-black/50 border border-gray-600 rounded-full text-sm text-gray-300 hover:border-cyan-400 hover:text-cyan-400 transition-all duration-300"
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  }
                 </div>
               </div>
             ))}

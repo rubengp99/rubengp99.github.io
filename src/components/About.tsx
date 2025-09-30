@@ -18,9 +18,9 @@ const About = () => {
             <div className="text-lg text-gray-300 leading-relaxed">
               <p className="mb-4">
                 <span className="text-cyan-400 font-mono">class</span>
-                <span className="text-white"> LeadEngineer </span>
+                <span className="text-white"> SeniorSoftwareEngineer </span>
                 <span className="text-cyan-400 font-mono">extends</span>
-                <span className="text-green-400"> TechLeader </span>
+                <span className="text-green-400"> LeadEngineer </span>
                 <span className="text-gray-400">{"{"}</span>
               </p>
               <p className="ml-4 mb-4">
@@ -41,25 +41,25 @@ const About = () => {
             <div className="bg-black/50 border border-cyan-500/30 rounded-lg p-6 text-center hover:border-cyan-500/60 transition-all duration-300">
               <Code className="text-cyan-400 mx-auto mb-3" size={32} />
               <h3 className="text-white font-semibold mb-2">Distributed Systems</h3>
-              <p className="text-gray-400 text-sm">Building scalable microservices architectures</p>
+              <p className="text-gray-400 text-sm">Building scalable microservices and event-driven architectures</p>
             </div>
             
             <div className="bg-black/50 border border-purple-500/30 rounded-lg p-6 text-center hover:border-purple-500/60 transition-all duration-300">
               <Zap className="text-purple-400 mx-auto mb-3" size={32} />
               <h3 className="text-white font-semibold mb-2">Cloud Infrastructure</h3>
-              <p className="text-gray-400 text-sm">AWS optimization and cost reduction</p>
+              <p className="text-gray-400 text-sm">AWS setup, optimization and cost reduction</p>
             </div>
             
             <div className="bg-black/50 border border-green-500/30 rounded-lg p-6 text-center hover:border-green-500/60 transition-all duration-300">
               <Shield className="text-green-400 mx-auto mb-3" size={32} />
-              <h3 className="text-white font-semibold mb-2">Test-Driven Dev</h3>
-              <p className="text-gray-400 text-sm">Custom testing frameworks and TDD practices</p>
+              <h3 className="text-white font-semibold mb-2">Test-Driven Development</h3>
+              <p className="text-gray-400 text-sm">TDD first approach and custom testing frameworks</p>
             </div>
             
             <div className="bg-black/50 border border-yellow-500/30 rounded-lg p-6 text-center hover:border-yellow-500/60 transition-all duration-300">
               <Cpu className="text-yellow-400 mx-auto mb-3" size={32} />
               <h3 className="text-white font-semibold mb-2">Leadership</h3>
-              <p className="text-gray-400 text-sm">Mentoring teams and driving technical initiatives</p>
+              <p className="text-gray-400 text-sm">Mentoring teams and driving technical initiatives with SOLID principles</p>
             </div>
           </div>
         </div>
