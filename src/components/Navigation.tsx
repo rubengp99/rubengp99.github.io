@@ -14,10 +14,9 @@ const Navigation = () => {
   }, []);
 
   const handleDownloadCV = () => {
-    // Create a sample CV download - in real implementation, this would link to actual CV
     const link = document.createElement('a');
-    link.href = 'data:text/plain;charset=utf-8,Senior Software Engineer CV - Coming Soon!';
-    link.download = 'senior-engineer-cv.txt';
+    link.href = '/Ruben_D_Garcia_-_Senior_Software_Engineer.pdf';
+    link.download = 'Ruben_D_Garcia_-_Senior_Software_Engineer.pdf';
     link.click();
   };
 
