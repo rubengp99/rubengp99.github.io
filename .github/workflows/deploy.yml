@@ -1,15 +1,8 @@
-name: Deploy to GitHub Pages
-
-on:
-  push:
-    branches:
-      - main # adjust if your default branch is different
-
 jobs:
   build-and-deploy:
+    runs-on: ubuntu-latest
     permissions:
       contents: write
-    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
@@ -24,9 +17,15 @@ jobs:
         run: npm ci
 
       - name: Build project
-        run: npm run build
+        run: |
+          npm run build || exit 1
+          echo "Build complete. Listing root:"
+          ls -al
+          echo "Listing dist/:"
+          ls -al dist || echo "⚠️ dist directory not found"
 
       - name: Deploy to GitHub Pages
+        if: success()
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
