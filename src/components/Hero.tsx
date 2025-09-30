@@ -1,0 +1,90 @@
+import React from 'react';
+import { Github, Linkedin, Mail, Terminal } from 'lucide-react';
+
+const Hero = () => {
+  return (
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-20 left-10 w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
+        <div className="absolute top-40 right-20 w-1 h-1 bg-purple-500 rounded-full animate-pulse delay-1000"></div>
+        <div className="absolute bottom-20 left-20 w-3 h-3 bg-green-400 rounded-full animate-pulse delay-2000"></div>
+        <div className="absolute top-60 left-1/3 w-1 h-1 bg-yellow-400 rounded-full animate-pulse delay-3000"></div>
+      </div>
+
+      <div className="text-center z-10 px-4">
+        <div className="mb-8">
+          <div className="inline-block p-4 border border-cyan-500/30 rounded-lg mb-6 bg-black/50 backdrop-blur-sm">
+            <Terminal className="text-cyan-400" size={48} />
+          </div>
+          <h1 className="text-5xl md:text-7xl font-bold mb-4">
+            <span className="text-white">Ruben D. Garcia</span>
+            <br />
+            <span className="bg-gradient-to-r from-cyan-400 to-green-400 bg-clip-text text-transparent">
+              Senior Software Engineer
+            </span>
+          </h1>
+          <div className="text-xl md:text-2xl text-gray-300 mb-6">
+            <span className="text-cyan-400">$</span> whoami
+            <br />
+            <span className="font-mono text-green-400">
+              &gt; Building scalable distributed systems with Go & AWS
+            </span>
+          </div>
+        </div>
+
+        <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-8">
+          <div className="text-gray-400 font-mono">
+            <span className="text-cyan-400">languages:</span> [Go, Node.js, Python, TypeScript]
+          </div>
+          <div className="text-gray-400 font-mono">
+            <span className="text-purple-400">experience:</span> 5+ years
+          </div>
+        </div>
+
+        <div className="flex items-center justify-center gap-6">
+          <a
+            href="https://github.com/rubengp99"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-3 border border-cyan-500/50 rounded-lg hover:bg-cyan-500/20 transition-all duration-300 transform hover:scale-110"
+          >
+            <Github className="text-cyan-400" size={24} />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/rubengp99/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-3 border border-purple-500/50 rounded-lg hover:bg-purple-500/20 transition-all duration-300 transform hover:scale-110"
+          >
+            <Linkedin className="text-purple-400" size={24} />
+          </a>
+          <a
+            href="#contact"
+            className="p-3 border border-green-500/50 rounded-lg hover:bg-green-500/20 transition-all duration-300 transform hover:scale-110"
+          >
+            <Mail className="text-green-400" size={24} />
+          </a>
+        </div>
+
+        <div className="mt-12">
+          <a
+            href="#about"
+            className="inline-block px-8 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg text-white font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+          >
+            Initialize Connection
+          </a>
+        </div>
+      </div>
+
+      {/* Scroll Indicator */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+        <div className="w-6 h-10 border-2 border-cyan-400/50 rounded-full flex justify-center">
+          <div className="w-1 h-3 bg-cyan-400 rounded-full mt-2 animate-bounce"></div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Hero;
