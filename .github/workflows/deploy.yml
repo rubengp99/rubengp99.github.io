@@ -1,3 +1,10 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main # change if your default branch is different
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -18,15 +25,11 @@ jobs:
 
       - name: Build project
         run: |
-          npm run build || exit 1
-          echo "Build complete. Listing root:"
+          echo "⚡ Running Vite build..."
+          npm run build
+          BUILD_EXIT_CODE=$?
+          echo "✅ Build finished with exit code $BUILD_EXIT_CODE"
+          echo ""
+          echo "📂 Root contents after build:"
           ls -al
-          echo "Listing dist/:"
-          ls -al dist || echo "⚠️ dist directory not found"
-
-      - name: Deploy to GitHub Pages
-        if: success()
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+          echo ""
