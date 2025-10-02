@@ -46,18 +46,18 @@ const Projects = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="text-white">Featured </span>
-            <span className="text-yellow-400">Projects</span>
+            <span className="text-white posver-futuristic">Featured </span>
+            <span className="text-yellow-500 posver-futuristic">Projects</span>
           </h2>
-          <p className="text-gray-400 text-lg">
-            <span className="text-cyan-400 font-mono">$</span> find ./projects -name "*.revolutionary"
+          <p className="text-gray-300 text-lg">
+            <span className="text-custom-cyan-600 font-mono">$</span> find ./projects -name "*.revolutionary"
           </p>
-          <div className="w-20 h-1 bg-gradient-to-r from-cyan-400 to-purple-500 mx-auto mt-4"></div>
+          <div className="w-20 h-1 bg-gradient-to-r from-custom-purple-600 to-cyan-500 mx-auto mt-4"></div>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
-            <div key={index} className="group bg-gray-900/50 border border-gray-700 rounded-lg overflow-hidden hover:border-cyan-500/50 transition-all duration-300 transform hover:scale-105">
+            <div key={index} className="group bg-gray-900/50 border border-gray-700 rounded-lg overflow-hidden hover:border-custom-cyan-500/50 transition-all duration-300 transform hover:scale-105">
               <div className="relative overflow-hidden">
                 <img 
                   src={project.image} 
@@ -67,11 +67,11 @@ const Projects = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                 <div className="absolute top-4 right-4 flex gap-2">
                   <div className="flex items-center bg-black/70 backdrop-blur-sm px-2 py-1 rounded text-sm">
-                    <Star className="text-yellow-400 mr-1" size={14} />
+                    <Star className="text-yellow-500 mr-1" size={14} />
                     <span className="text-white">{project.stats.stars}</span>
                   </div>
                   <div className="flex items-center bg-black/70 backdrop-blur-sm px-2 py-1 rounded text-sm">
-                    <GitBranch className="text-cyan-400 mr-1" size={14} />
+                    <GitBranch className="text-custom-cyan-600 mr-1" size={14} />
                     <span className="text-white">{project.stats.forks}</span>
                   </div>
                 </div>
@@ -104,7 +104,7 @@ const Projects = () => {
                   </a>
                   <a
                     href={project.demo}
-                    className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white rounded-lg transition-all duration-300 flex-1 justify-center"
+                    className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-custom-purple-600 to-purple-600 hover:from-custom-cyan-600 hover:to-purple-700 text-white rounded-lg transition-all duration-300 flex-1 justify-center"
                   >
                     <ExternalLink size={16} />
                     Demo
@@ -120,7 +120,7 @@ const Projects = () => {
             href="https://github.com/rubengp99"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block px-8 py-3 border border-cyan-500 text-cyan-400 rounded-lg hover:bg-cyan-500 hover:text-black transition-all duration-300 transform hover:scale-105"
+            className="inline-block px-8 py-3 border border-custom-cyan-500 text-custom-cyan-600 rounded-lg hover:bg-custom-cyan-500 hover:text-black transition-all duration-300 transform hover:scale-105"
           >
             View Profile on GitHub
           </a>

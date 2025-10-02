@@ -52,10 +52,10 @@ const Skills = () => {
 
   const getColorClasses = (color: string) => {
     const colorMap = {
-      cyan: 'border-cyan-500/30 hover:border-cyan-500/60 text-cyan-400',
-      purple: 'border-purple-500/30 hover:border-purple-500/60 text-purple-400',
-      green: 'border-green-500/30 hover:border-green-500/60 text-green-400',
-      yellow: 'border-yellow-500/30 hover:border-yellow-500/60 text-yellow-400'
+      cyan: 'border-custom-cyan-500/30 hover:border-custom-cyan-500/60 text-custom-cyan-600',
+      purple: 'border-custom-purple-500/30 hover:border-custom-purple-500/60 text-custom-purple-400',
+      green: 'border-green-500/30 hover:border-green-500/60 text-green-500',
+      yellow: 'border-yellow-500/30 hover:border-yellow-500/60 text-yellow-500'
     };
     return colorMap[color as keyof typeof colorMap];
   };
@@ -63,13 +63,13 @@ const Skills = () => {
   const getTagColor = (level: string) => {
     switch (level) {
       case 'Expert':
-        return 'bg-green-600/20 text-green-400 border border-green-500/30';
+        return 'bg-green-700/20 text-green-500 border border-green-500/30';
       case 'Advanced':
-        return 'bg-purple-600/20 text-purple-400 border border-purple-500/30';
+        return 'bg-custom-purple-700/20 text-custom-purple-500 border border-custom-purple-600/30';
       case 'Intermediate':
-        return 'bg-yellow-600/20 text-yellow-400 border border-yellow-500/30';
+        return 'bg-yellow-700/20 text-yellow-500 border border-yellow-600/30';
       case 'Basic':
-        return 'bg-gray-600/20 text-gray-300 border border-gray-500/30';
+        return 'bg-custom-cyan-600/20 text-custom-cyan-400 border border-custom-cyan-500/30';
       default:
         return 'bg-gray-600/20 text-gray-300 border border-gray-500/30';
     }
@@ -81,13 +81,13 @@ const Skills = () => {
         {/* Section header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="text-white">Technical </span>
-            <span className="text-purple-400">Arsenal</span>
+            <span className="text-white posver-futuristic">Technical </span>
+            <span className="text-purple-600 posver-futuristic">Arsenal</span>
           </h2>
-          <p className="text-gray-400 text-lg">
-            <span className="text-cyan-400 font-mono">$</span> ls -la /skills/
+          <p className="text-gray-300 text-lg">
+            <span className="text-custom-cyan-600 font-mono">$</span> ls -la /skills/
           </p>
-          <div className="w-20 h-1 bg-gradient-to-r from-cyan-400 to-purple-500 mx-auto mt-4"></div>
+          <div className="w-20 h-1 bg-gradient-to-r from-custom-purple-600 to-cyan-500 mx-auto mt-4"></div>
         </div>
 
         {/* Skill grid */}
@@ -136,13 +136,13 @@ const Skills = () => {
               Core Philosophy
             </h3>
             <p className="text-gray-300 text-lg leading-relaxed">
-              <span className="text-cyan-400 font-mono">"</span>
+              <span className="text-custom-cyan-600 font-mono">"</span>
               Strong expertise in distributed systems, event-driven
               architectures, and test-driven development. I focus on building
               scalable, resilient systems with clean architecture and
               infrastructure as code, ensuring alignment between technical
               excellence and business objectives.
-              <span className="text-cyan-400 font-mono">"</span>
+              <span className="text-custom-cyan-600 font-mono">"</span>
             </p>
           </div>
         </div>
