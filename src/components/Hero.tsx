@@ -4,7 +4,7 @@ import { Github, Linkedin, Mail, Terminal } from 'lucide-react';
 const Hero = () => {
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Animated Background Elements */}
+      {/* Animated Background Elements 
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-1 h-3 bg-purple-400 rounded-full animate-pulse"></div>
         <div className="absolute top-60 left-40 w-3 h-1 bg-green-400 rounded-full animate-pulse delay-1500"></div>
@@ -27,7 +27,7 @@ const Hero = () => {
         <div className="absolute bottom-60 left-1/3 w-3 h-2 bg-purple-400 rounded-full animate-pulse delay-2000"></div>
         <div className="absolute bottom-60 right-1/3 w-3 h-2 bg-purple-400 rounded-full animate-pulse delay-1000"></div>
       </div>
-
+      */}
       <div className="text-center z-10 px-4">
         <div className="mb-8">
           <div className="inline-block p-4 border border-cyan-500/30 rounded-lg mb-6 bg-black/50 backdrop-blur-sm">

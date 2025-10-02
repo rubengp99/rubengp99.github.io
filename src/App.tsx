@@ -7,6 +7,7 @@ import Projects from './components/Projects';
 import Education from './components/Education';
 import Contact from './components/Contact';
 import Navigation from './components/Navigation';
+import ParallaxWrapper from './components/ParallaxWrapper'
 
 function App() {
   return (
@@ -20,13 +21,15 @@ function App() {
         {/* Main Content */}
         <div className="relative z-10">
           <Navigation />
-          <Hero />
-          <About />
-          <Skills />
-          <Experience />
-          <Projects />
-          <Education />
-          <Contact />
+          <ParallaxWrapper backgroundVideo='parallax' fallbackImage="parallax.png">
+            <Hero />
+            <About />
+            <Skills />
+            <Experience />
+            <Projects />
+            <Education />
+            <Contact />
+          </ParallaxWrapper>
         </div>
       </div>
     </div>

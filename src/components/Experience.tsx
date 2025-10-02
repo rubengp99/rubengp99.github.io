@@ -4,8 +4,8 @@ import { Calendar, MapPin, TrendingUp } from 'lucide-react';
 const Experience = () => {
   const experiences = [
     {
-      title: 'Career Break & Freelancing',
-      company: 'N/A',
+      title: 'Career Break',
+      company: '',
       location: 'Nueva Esparta, Venezuela',
       period: 'Dec 2024 - Present',
       description: 'Career break to focus on physical & mental health as well as finding passions outside of the tech world for a couple of months. Currently exploring new career opportunities.',
@@ -15,7 +15,7 @@ const Experience = () => {
     {
       title: 'Lead Engineer (Full-Time)',
       company: 'Cadana',
-      location: 'Nueva Esparta, Venezuela (Remote)',
+      location: 'Remote',
       period: 'Jun 2021 - Dec 2024',
       description: 'Led engineering initiatives at a fintech startup, driving technical excellence and delivering innovative financial products.',
       achievements: [
@@ -30,7 +30,7 @@ const Experience = () => {
     {
       title: 'Software Engineer (Full-Time)',
       company: 'Esusu',
-      location: 'Nueva Esparta, Venezuela (Remote)',
+      location: 'Remote',
       period: 'May 2020 - Jun 2021',
       description: 'Developed scalable solutions for fintech platform focused on rent reporting and credit building.',
       achievements: [
@@ -44,7 +44,7 @@ const Experience = () => {
     {
       title: 'Project Manager (Contract)',
       company: 'Somos Sistemas',
-      location: 'Nueva Esparta, Venezuela (Remote)',
+      location: 'Nueva Esparta, Venezuela',
       period: 'Feb 2020 - Aug 2020',
       description: 'Led cloud migration and product development initiatives for ERP solutions.',
       achievements: [
