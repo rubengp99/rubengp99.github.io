@@ -12,7 +12,7 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    fetch(`${import.meta.env.VITE_API_URL}/api/contact`, {
+    fetch(`https://vercel-serverless-mailer.vercel.app/api/contact`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
