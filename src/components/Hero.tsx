@@ -28,9 +28,10 @@ const Hero = () => {
 
       <div className="text-center z-10 px-4">
         <div className="mb-8">
-          <div className="inline-block p-4 border border-custom-purple-500/30 rounded-lg mb-6 bg-black/50 backdrop-blur-sm">
+          <div className="hidden md:inline-block p-4 border border-custom-purple-500/30 rounded-lg mb-6 bg-black/50 backdrop-blur-sm">
             <Terminal className="text-custom-purple-600" size={48} />
           </div>
+
           <h1 className="text-4xl md:text-6xl font-bold mb-4 posver-futuristic">
             <span className="text-white">Ruben D. Garcia</span>
             <br />
