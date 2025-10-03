@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Animated Background Elements */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 hidden md:block">
         <div className="absolute top-20 left-10 w-1 h-3 bg-custom-purple-600 rounded-full animate-pulse"></div>
         <div className="absolute top-60 left-40 w-3 h-1 bg-green-600 rounded-full animate-pulse delay-1500"></div>
         <div className="absolute top-80 left-80 w-2 h-3 bg-custom-cyan-600 rounded-full animate-pulse delay-1500"></div>
