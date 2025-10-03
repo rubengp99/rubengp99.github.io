@@ -95,9 +95,9 @@ const Skills = () => {
           {skillCategories.map((category) => (
             <div
               key={category.title}
-              className={`bg-gray-900/50 border ${getColorClasses(
+              className={`bg-gray-900/90 border ${getColorClasses(
                 category.color
-              )} rounded-lg p-6 hover:bg-gray-900/70 transition-all duration-300`}
+              )} rounded-lg p-6 hover:bg-gray-900/85 transition-all duration-300`}
             >
               <h3
                 className={`text-xl font-semibold mb-6 ${getColorClasses(
@@ -131,7 +131,7 @@ const Skills = () => {
 
         {/* Philosophy */}
         <div className="mt-16 text-center">
-          <div className="bg-gray-900/50 border border-gray-700 rounded-lg p-8 max-w-4xl mx-auto">
+          <div className="bg-gray-900/90 border border-gray-700 rounded-lg p-8 max-w-4xl mx-auto">
             <h3 className="text-2xl font-semibold text-white mb-4">
               Core Philosophy
             </h3>

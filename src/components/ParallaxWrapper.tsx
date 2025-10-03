@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 
 interface ParallaxWrapperProps {
   backgroundVideo?: string; // base path, must have both .webm and .mp4
@@ -12,17 +12,24 @@ const ParallaxWrapper: React.FC<ParallaxWrapperProps> = ({
   backgroundVideo,
   fallbackImage,
   speed = 1,
-  overlayOpacity = 0.85,
+  overlayOpacity = 0.9,
   children,
 }) => {
   const [offsetY, setOffsetY] = useState(0);
   const [videoLoaded, setVideoLoaded] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
     const handleScroll = () => setOffsetY(window.scrollY);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.playbackRate = 0.8; // slow down video
+    }
+  }, [videoLoaded]);
 
   return (
     <section className="relative min-h-screen overflow-hidden flex items-center justify-center">
@@ -42,6 +49,7 @@ const ParallaxWrapper: React.FC<ParallaxWrapperProps> = ({
       {/* Background video (fades in on load) */}
       {backgroundVideo && (
         <video
+          ref={videoRef}
           className={`absolute inset-0 w-full h-[100vh] object-cover transition-opacity duration-1000 ${
             videoLoaded ? "opacity-100" : "opacity-0"
           }`}

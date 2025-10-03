@@ -57,7 +57,7 @@ const Projects = () => {
 
         <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
-            <div key={index} className="group bg-gray-900/50 border border-gray-700 rounded-lg overflow-hidden hover:border-custom-purple-500/50 transition-all duration-300 transform hover:scale-105">
+            <div key={index} className="group bg-gray-900/90 border border-gray-700 rounded-lg overflow-hidden hover:border-custom-purple-500/50 transition-all duration-300 transform hover:scale-105">
               <div className="relative overflow-hidden">
                 <img 
                   src={project.image} 
