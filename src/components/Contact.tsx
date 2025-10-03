@@ -39,7 +39,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-transparent to-gray-900">
+    <section id="contact" className="py-20 bg-gradient-to-br  from-gray-900 to-transparent">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -110,7 +110,7 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-gray-900/50 border border-gray-700 rounded-lg p-8">
+          <div className="bg-gray-900/90 border border-custom-purple-600/50 rounded-lg p-8">
             <h3 className="text-2xl font-bold text-white mb-6">Send Message</h3>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
@@ -124,7 +124,7 @@ const Contact = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-black/50 border border-gray-600 rounded-lg text-white placeholder-gray-300 focus:border-custom-cyan-500 focus:outline-none focus:ring-1 focus:ring-custom-cyan-500 transition-all duration-300"
+                  className="w-full px-4 py-3 bg-black/50 border border-custom-purple-600/50 rounded-lg text-white placeholder-gray-300 focus:border-custom-cyan-500 focus:outline-none focus:ring-1 focus:ring-custom-cyan-500 transition-all duration-300"
                   placeholder="Your name"
                 />
               </div>
@@ -140,7 +140,7 @@ const Contact = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-black/50 border border-gray-600 rounded-lg text-white placeholder-gray-300 focus:border-custom-cyan-500 focus:outline-none focus:ring-1 focus:ring-custom-cyan-500 transition-all duration-300"
+                  className="w-full px-4 py-3 bg-black/50 border border-custom-purple-600/50 rounded-lg text-white placeholder-gray-300 focus:border-custom-cyan-500 focus:outline-none focus:ring-1 focus:ring-custom-cyan-500 transition-all duration-300"
                   placeholder="your@email.com"
                 />
               </div>
@@ -156,7 +156,7 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   rows={5}
-                  className="w-full px-4 py-3 bg-black/50 border border-gray-600 rounded-lg text-white placeholder-gray-300 focus:border-custom-cyan-500 focus:outline-none focus:ring-1 focus:ring-custom-cyan-500 transition-all duration-300 resize-none"
+                  className="w-full px-4 py-3 bg-black/50 border border-custom-purple-600/50 rounded-lg text-white placeholder-gray-300 focus:border-custom-cyan-500 focus:outline-none focus:ring-1 focus:ring-custom-cyan-500 transition-all duration-300 resize-none"
                   placeholder="Let's discuss your project..."
                 />
               </div>
