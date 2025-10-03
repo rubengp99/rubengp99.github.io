@@ -8,6 +8,7 @@ import Education from './components/Education';
 import Contact from './components/Contact';
 import Navigation from './components/Navigation';
 import ParallaxWrapper from './components/ParallaxWrapper'
+import { Toaster } from "sonner";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
             <Education />
             <Contact />
           </ParallaxWrapper>
+          <Toaster richColors position="top-right" />
         </div>
       </div>
     </div>

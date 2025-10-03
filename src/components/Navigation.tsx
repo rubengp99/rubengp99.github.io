@@ -35,8 +35,8 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
-            <span className="text-2xl font-bold bg-gradient-to-r from-custom-cyan-700 to-purple-600 bg-clip-text text-transparent">
-              &lt;rubengp99&gt;
+            <span className="text-2xl font-bold bg-gradient-to-r from-custom-purple-800 to-custom-cyan-700 bg-clip-text text-transparent">
+              &lt;rubengp99/&gt;
             </span>
           </div>
           
@@ -53,7 +53,7 @@ const Navigation = () => {
               ))}
               <button
                 onClick={handleDownloadCV}
-                className="ml-4 bg-gradient-to-r from-custom-cyan-800 to-purple-600 hover:from-custom-cyan-700 hover:to-purple-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
+                className="ml-4 bg-gradient-to-r from-custom-purple-800 to-custom-cyan-700 hover:from-custom-cyan-700 hover:to-purple-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
               >
                 <Download size={16} />
                 Download CV
@@ -88,7 +88,7 @@ const Navigation = () => {
             ))}
             <button
               onClick={handleDownloadCV}
-              className="w-full bg-gradient-to-r from-custom-cyan-800 to-purple-600 text-white px-3 py-2 rounded-lg text-base font-medium flex items-center justify-center gap-2 mt-4"
+              className="w-full bg-gradient-to-r from-custom-purple-800 to-custom-cyan-700 text-white px-3 py-2 rounded-lg text-base font-medium flex items-center justify-center gap-2 mt-4"
             >
               <Download size={16} />
               Download CV

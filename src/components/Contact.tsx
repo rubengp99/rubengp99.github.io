@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Mail, MessageSquare, Send, Github, Linkedin } from 'lucide-react';
+import { toast } from "sonner";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -8,13 +9,27 @@ const Contact = () => {
     message: ''
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-    alert('Message sent! (This is a demo)');
-    setFormData({ name: '', email: '', message: '' });
+
+    fetch(`${import.meta.env.VITE_API_URL}/api/contact`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    }).then((res) => {
+      if (res.ok) {
+        toast.success("Message sent!");
+        setFormData({ name: "", email: "", message: "" });
+        }else {
+        toast.error("Failed to send message");
+      }
+    }).catch((res) => {
+      toast.error("Failed to send message");
+    });
+
+     
   };
+
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -148,7 +163,7 @@ const Contact = () => {
               
               <button
                 type="submit"
-                className="w-full bg-gradient-to-r from-custom-purple-600 to-purple-600 hover:from-custom-cyan-600 hover:to-purple-700 text-white py-3 px-6 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
+                className="w-full bg-gradient-to-r from-custom-purple-800 to-custom-cyan-700 hover:from-custom-cyan-700 hover:to-purple-700 text-white py-3 px-6 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
               >
                 <Send size={20} />
                 Send Message

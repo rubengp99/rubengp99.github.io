@@ -57,7 +57,7 @@ const Projects = () => {
 
         <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
-            <div key={index} className="group bg-gray-900/50 border border-gray-700 rounded-lg overflow-hidden hover:border-custom-cyan-500/50 transition-all duration-300 transform hover:scale-105">
+            <div key={index} className="group bg-gray-900/50 border border-gray-700 rounded-lg overflow-hidden hover:border-custom-purple-500/50 transition-all duration-300 transform hover:scale-105">
               <div className="relative overflow-hidden">
                 <img 
                   src={project.image} 
@@ -104,7 +104,7 @@ const Projects = () => {
                   </a>
                   <a
                     href={project.demo}
-                    className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-custom-purple-600 to-purple-600 hover:from-custom-cyan-600 hover:to-purple-700 text-white rounded-lg transition-all duration-300 flex-1 justify-center"
+                    className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-custom-purple-800 to-custom-cyan-700 hover:from-custom-cyan-700 hover:to-purple-700 text-white rounded-lg transition-all duration-300 flex-1 justify-center"
                   >
                     <ExternalLink size={16} />
                     Demo
@@ -120,7 +120,7 @@ const Projects = () => {
             href="https://github.com/rubengp99"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block px-8 py-3 border border-custom-cyan-500 text-custom-cyan-600 rounded-lg hover:bg-custom-cyan-500 hover:text-black transition-all duration-300 transform hover:scale-105"
+            className="inline-block px-8 py-3 border border-custom-cyan-600 text-custom-cyan-600 rounded-lg hover:bg-custom-cyan-600 hover:text-black transition-all duration-300 transform hover:scale-105"
           >
             View Profile on GitHub
           </a>

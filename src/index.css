@@ -192,7 +192,7 @@ html {
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 4px;
 }
 
 ::-webkit-scrollbar-track {
@@ -200,12 +200,12 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(45deg, #76dcff, #8c67f3);
+  background: linear-gradient(45deg, #0090bf, #5c2fbd);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(45deg, #8c67f3, #200944);
+  background: linear-gradient(45deg, #754ada, #00b8f5);
 }
 
 /* Glitch Effect for Text */

@@ -6,24 +6,24 @@ const Hero = () => {
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-20 left-10 w-1 h-3 bg-custom-purple-400 rounded-full animate-pulse"></div>
-        <div className="absolute top-60 left-40 w-3 h-1 bg-green-500 rounded-full animate-pulse delay-1500"></div>
+        <div className="absolute top-20 left-10 w-1 h-3 bg-custom-purple-600 rounded-full animate-pulse"></div>
+        <div className="absolute top-60 left-40 w-3 h-1 bg-green-600 rounded-full animate-pulse delay-1500"></div>
         <div className="absolute top-80 left-80 w-2 h-3 bg-custom-cyan-600 rounded-full animate-pulse delay-1500"></div>
 
-        <div className="absolute top-40 right-20 w-1 h-3 bg-purple-500 rounded-full animate-pulse delay-1000"></div>
-        <div className="absolute top-80 right-60 w-2 h-3 bg-purple-500 rounded-full animate-pulse delay-2000"></div>
-        <div className="absolute top-60 right-80 w-2 h-3 bg-green-500 rounded-full animate-pulse delay-1500"></div>
+        <div className="absolute top-40 right-20 w-1 h-3 bg-purple-600 rounded-full animate-pulse delay-1000"></div>
+        <div className="absolute top-80 right-60 w-2 h-3 bg-purple-600 rounded-full animate-pulse delay-2000"></div>
+        <div className="absolute top-60 right-80 w-2 h-3 bg-green-600 rounded-full animate-pulse delay-1500"></div>
 
-        <div className="absolute bottom-20 left-20 w-3 h-3 bg-green-500 rounded-full animate-pulse delay-2000"></div>
-        <div className="absolute bottom-60 left-80 w-3 h-3 bg-custom-cyan-600 rounded-full animate-pulse delay-1500"></div>
-        <div className="absolute bottom-80 left-40 w-2 h-3 bg-custom-purple-400 rounded-full animate-pulse delay-1000"></div>
+        <div className="absolute bottom-20 left-20 w-3 h-3 bg-green-600 rounded-full animate-pulse delay-2000"></div>
+        <div className="absolute bottom-60 left-80 w-3 h-3 bg-custom-cyan-700 rounded-full animate-pulse delay-1500"></div>
+        <div className="absolute bottom-80 left-40 w-2 h-3 bg-custom-purple-600 rounded-full animate-pulse delay-1000"></div>
 
-        <div className="absolute bottom-20 right-40 w-3 h-3 bg-green-500 rounded-full animate-pulse delay-2000"></div>
-        <div className="absolute bottom-80 right-20 w-2 h-3 bg-custom-purple-400 rounded-full animate-pulse delay-1000"></div>
+        <div className="absolute bottom-20 right-40 w-3 h-3 bg-green-600 rounded-full animate-pulse delay-2000"></div>
+        <div className="absolute bottom-80 right-20 w-2 h-3 bg-custom-purple-600 rounded-full animate-pulse delay-1000"></div>
 
-        <div className="absolute top-60 right-1/3 w-1 h-2 bg-custom-purple-400 rounded-full animate-pulse"></div>
-        <div className="absolute bottom-60 left-1/3 w-3 h-2 bg-custom-purple-400 rounded-full animate-pulse delay-2000"></div>
-        <div className="absolute bottom-60 right-1/3 w-3 h-2 bg-custom-purple-400 rounded-full animate-pulse delay-1000"></div>
+        <div className="absolute top-60 right-1/3 w-1 h-2 bg-custom-purple-600 rounded-full animate-pulse"></div>
+        <div className="absolute bottom-60 left-1/3 w-3 h-2 bg-custom-purple-600 rounded-full animate-pulse delay-2000"></div>
+        <div className="absolute bottom-60 right-1/3 w-3 h-2 bg-custom-purple-600 rounded-full animate-pulse delay-1000"></div>
       </div>
 
       <div className="text-center z-10 px-4">
@@ -84,9 +84,9 @@ const Hero = () => {
         <div className="mt-12">
           <a
             href="#about"
-            className="inline-block px-8 py-3 bg-gradient-to-r from-custom-cyan-800 to-purple-600 rounded-lg text-white font-semibold hover:from-custom-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+            className="inline-block px-8 py-3 bg-gradient-to-r from-custom-purple-800 to-custom-cyan-700 rounded-lg text-white font-semibold hover:from-custom-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
           >
-            Connect
+            Initialize
           </a>
         </div>
       </div>
