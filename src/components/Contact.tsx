@@ -41,7 +41,7 @@ const Contact = () => {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        username: import.meta.env.VITE_ADMIN_USER,
+        email: import.meta.env.VITE_ADMIN_EMAIL,
         password: encrypted,
       }),
     });
