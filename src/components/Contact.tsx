@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
 import { Mail, MessageSquare, Send, Github, Linkedin } from 'lucide-react';
+import { jwtDecode } from "jwt-decode";
 import { toast } from "sonner";
+
+interface DecodedToken {
+  exp: number; // expiration timestamp (seconds)
+  sub: string;
+}
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -9,25 +15,63 @@ const Contact = () => {
     message: ''
   });
 
+  // Get a valid token or re-authenticate
+  const getValidToken = async (): Promise<string> => {
+    const stored = localStorage.getItem("token");
+
+    if (stored) {
+      try {
+        const decoded: DecodedToken = jwtDecode(stored);
+        const now = Math.floor(Date.now() / 1000);
+
+        if (decoded.exp > now) {
+          // still valid
+          return stored;
+        }
+      } catch {
+        console.warn("Invalid token in storage");
+      }
+    }
+
+    // expired or missing, then login again
+    const res = await fetch(`${import.meta.env.VITE_API_URL}/api/auth`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        username: import.meta.env.VITE_ADMIN_USER,
+        password: import.meta.env.VITE_ADMIN_PASS,
+      }),
+    });
+
+    if (!res.ok) {
+      throw new Error("Login failed");
+    }
+
+    const { token } = await res.json();
+    localStorage.setItem("token", token);
+    return token;
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    const token = await getValidToken();
 
     fetch(`https://vercel-serverless-mailer.vercel.app/api/contact`, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: { "Content-Type": "application/json", Authorization: `Bearer ${token}`, },
       body: JSON.stringify(formData),
     }).then((res) => {
       if (res.ok) {
         toast.success("Message sent!");
         setFormData({ name: "", email: "", message: "" });
-        }else {
+      } else {
         toast.error("Failed to send message");
       }
     }).catch((res) => {
       toast.error("Failed to send message");
     });
 
-     
+
   };
 
 
@@ -128,7 +172,7 @@ const Contact = () => {
                   placeholder="Your name"
                 />
               </div>
-              
+
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
                   Email
@@ -144,7 +188,7 @@ const Contact = () => {
                   placeholder="your@email.com"
                 />
               </div>
-              
+
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
                   Message
@@ -160,7 +204,7 @@ const Contact = () => {
                   placeholder="Let's discuss your project..."
                 />
               </div>
-              
+
               <button
                 type="submit"
                 className="w-full bg-gradient-to-r from-custom-purple-800 to-custom-cyan-700 hover:from-custom-cyan-700 hover:to-purple-700 text-white py-3 px-6 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
