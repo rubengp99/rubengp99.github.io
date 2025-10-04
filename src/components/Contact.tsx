@@ -34,13 +34,15 @@ const Contact = () => {
       }
     }
 
+    const encrypted = await encryptPassword(import.meta.env.VITE_ADMIN_PASS)
+
     // expired or missing, then login again
     const res = await fetch(`${import.meta.env.VITE_API_URL}/api/auth`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         username: import.meta.env.VITE_ADMIN_USER,
-        password: encryptPassword(import.meta.env.VITE_ADMIN_PASS),
+        password: encrypted,
       }),
     });
 
