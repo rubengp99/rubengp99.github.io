@@ -124,7 +124,7 @@ const Contact = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-black/50 border border-custom-purple-600/50 rounded-lg text-white placeholder-gray-300 focus:border-custom-cyan-500 focus:outline-none focus:ring-1 focus:ring-custom-cyan-500 transition-all duration-300"
+                  className="w-full px-4 py-3 bg-black/50 border border-custom-purple-600/50 rounded-lg text-white placeholder-gray-300 focus:border-custom-cyan-600 focus:outline-none focus:ring-1 focus:ring-custom-cyan-600 transition-all duration-300"
                   placeholder="Your name"
                 />
               </div>
@@ -140,7 +140,7 @@ const Contact = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-black/50 border border-custom-purple-600/50 rounded-lg text-white placeholder-gray-300 focus:border-custom-cyan-500 focus:outline-none focus:ring-1 focus:ring-custom-cyan-500 transition-all duration-300"
+                  className="w-full px-4 py-3 bg-black/50 border border-custom-purple-600/50 rounded-lg text-white placeholder-gray-300 focus:border-custom-cyan-600 focus:outline-none focus:ring-1 focus:ring-custom-cyan-600 transition-all duration-300"
                   placeholder="your@email.com"
                 />
               </div>
@@ -156,7 +156,7 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   rows={5}
-                  className="w-full px-4 py-3 bg-black/50 border border-custom-purple-600/50 rounded-lg text-white placeholder-gray-300 focus:border-custom-cyan-500 focus:outline-none focus:ring-1 focus:ring-custom-cyan-500 transition-all duration-300 resize-none"
+                  className="w-full px-4 py-3 bg-black/50 border border-custom-purple-600/50 rounded-lg text-white placeholder-gray-300 focus:border-custom-cyan-600 focus:outline-none focus:ring-1 focus:ring-custom-cyan-600 transition-all duration-300 resize-none"
                   placeholder="Let's discuss your project..."
                 />
               </div>
