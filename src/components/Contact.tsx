@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Mail, MessageSquare, Send, Github, Linkedin } from 'lucide-react';
 import { jwtDecode } from "jwt-decode";
 import { toast } from "sonner";
+import { encryptPassword } from '../lib/crypto';
 
 interface DecodedToken {
   exp: number; // expiration timestamp (seconds)
@@ -39,7 +40,7 @@ const Contact = () => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         username: import.meta.env.VITE_ADMIN_USER,
-        password: import.meta.env.VITE_ADMIN_PASS,
+        password: encryptPassword(import.meta.env.VITE_ADMIN_PASS),
       }),
     });
 
@@ -56,7 +57,7 @@ const Contact = () => {
     e.preventDefault();
     const token = await getValidToken();
 
-    fetch(`https://vercel-serverless-mailer.vercel.app/api/contact`, {
+    fetch(`${import.meta.env.VITE_API_URL}/api/contact`, {
       method: "POST",
       headers: { "Content-Type": "application/json", Authorization: `Bearer ${token}`, },
       body: JSON.stringify(formData),
