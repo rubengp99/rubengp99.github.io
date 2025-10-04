@@ -12,6 +12,9 @@ jobs:
       contents: write
     env:
       VITE_API_URL: ${{ secrets.VITE_API_URL }}
+      VITE_ADMIN_EMAIL: ${{ secrets.VITE_ADMIN_EMAIL }}
+      VITE_VITE_ADMIN_PASS: ${{ secrets.VITE_VITE_ADMIN_PASS }}
+      VITE_ENCRYPTION_BASE_SECRET: ${{ secrets.VITE_ENCRYPTION_BASE_SECRET }}
 
     steps:
       - name: Checkout repository
