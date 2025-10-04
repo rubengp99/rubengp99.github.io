@@ -1,48 +1,33 @@
-import crypto from "crypto";
+// src/utils/encryption.ts
+import CryptoJS from "crypto-js";
 
-const ALGO = "aes-256-gcm";
+const FRAME_SIZE = 10 * 60 * 1000; // 10 min
 
-// Derive a rotating secret key based on current 10-min window
-function deriveKey(windowOffset = 0) {
-  const baseSecret = process.env.VITE_ENCRYPTION_BASE_SECRET || "fallback-secret";
-
-  // Current 1-minute frame
-  const frame = Math.floor(Date.now() / (60 * 1000)) + windowOffset;
-
-  return crypto
-    .createHash("sha256")
-    .update(baseSecret + frame.toString())
-    .digest(); // 32-byte key
+function deriveKey(windowOffset = 0): string {
+  const baseSecret = import.meta.env.VITE_ENCRYPTION_BASE_SECRET || "fallback-secret";
+  const frame = Math.floor(Date.now() / FRAME_SIZE) + windowOffset;
+  return CryptoJS.SHA256(baseSecret + frame.toString()).toString();
 }
 
-interface EncryptedData {
-  iv: string;
-  tag: string;
-  ciphertext: string;
-  expiresAt: number;
-}
-
-// Encrypt password with automatic 1-min rotating key
-export function encryptPassword(
-  password: string,
-  ttlMinutes = 1
-): EncryptedData {
-  const iv = crypto.randomBytes(16);
+export function encryptPassword(password: string, ttlMinutes = 10) {
   const key = deriveKey();
+  const iv = CryptoJS.lib.WordArray.random(16);
 
-  const cipher = crypto.createCipheriv(ALGO, key, iv);
-  const expiresAt = Date.now() + ttlMinutes * 60 * 1000;
+  const payload = JSON.stringify({
+    password,
+    expiresAt: Date.now() + ttlMinutes * 60 * 1000,
+  });
 
-  const payload = JSON.stringify({ password, expiresAt });
-
-  let encrypted = cipher.update(payload, "utf8", "hex");
-  encrypted += cipher.final("hex");
-  const tag = cipher.getAuthTag().toString("hex");
+  const encrypted = CryptoJS.AES.encrypt(payload, CryptoJS.enc.Hex.parse(key), {
+    iv,
+    mode: CryptoJS.mode.GCM,
+    format: CryptoJS.format.OpenSSL,
+  });
 
   return {
-    iv: iv.toString("hex"),
-    tag,
-    ciphertext: encrypted,
-    expiresAt,
+    iv: iv.toString(CryptoJS.enc.Hex),
+    ciphertext: encrypted.ciphertext.toString(CryptoJS.enc.Hex),
+    salt: encrypted.salt?.toString(CryptoJS.enc.Hex) || "",
+    expiresAt: Date.now() + ttlMinutes * 60 * 1000,
   };
 }
