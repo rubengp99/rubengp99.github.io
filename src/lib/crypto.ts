@@ -1,7 +1,8 @@
 const FRAME_SIZE = 60 * 1000; // 1 minute
 
-function toHex(buffer: ArrayBuffer): string {
-  return Array.from(new Uint8Array(buffer))
+function toHex(data: ArrayBuffer | Uint8Array): string {
+  const bytes = data instanceof Uint8Array ? data : new Uint8Array(data);
+  return Array.from(bytes)
     .map(b => b.toString(16).padStart(2, "0"))
     .join("");
 }
@@ -33,7 +34,7 @@ export async function encryptPassword(password: string, ttlMinutes = 10) {
   );
 
   return {
-    iv: toHex(iv.buffer),
+    iv: toHex(iv),
     ciphertext: toHex(ciphertext),
     expiresAt: Date.now() + ttlMinutes * 60 * 1000,
   };
