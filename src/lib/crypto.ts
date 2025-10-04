@@ -1,33 +1,40 @@
-// src/utils/encryption.ts
-import CryptoJS from "crypto-js";
+const FRAME_SIZE = 60 * 1000; // 1 minute
 
-const FRAME_SIZE = 10 * 60 * 1000; // 10 min
-
-function deriveKey(windowOffset = 0): string {
-  const baseSecret = import.meta.env.VITE_ENCRYPTION_BASE_SECRET || "fallback-secret";
-  const frame = Math.floor(Date.now() / FRAME_SIZE) + windowOffset;
-  return CryptoJS.SHA256(baseSecret + frame.toString()).toString();
+function toHex(buffer: ArrayBuffer): string {
+  return Array.from(new Uint8Array(buffer))
+    .map(b => b.toString(16).padStart(2, "0"))
+    .join("");
 }
 
-export function encryptPassword(password: string, ttlMinutes = 10) {
-  const key = deriveKey();
-  const iv = CryptoJS.lib.WordArray.random(16);
+async function getCryptoKey(secret: string, offset = 0) {
+  const frame = Math.floor(Date.now() / FRAME_SIZE) + offset;
+  const encoder = new TextEncoder();
+  const keyMaterial = encoder.encode(secret + frame.toString());
+  const hash = await crypto.subtle.digest("SHA-256", keyMaterial);
+  return crypto.subtle.importKey("raw", hash, "AES-GCM", false, ["encrypt", "decrypt"]);
+}
+
+export async function encryptPassword(password: string, ttlMinutes = 10) {
+  const secret = import.meta.env.VITE_ENCRYPTION_BASE_SECRET || "fallback-secret";
+  const key = await getCryptoKey(secret);
+
+  const iv = crypto.getRandomValues(new Uint8Array(12));
+  const encoder = new TextEncoder();
 
   const payload = JSON.stringify({
     password,
     expiresAt: Date.now() + ttlMinutes * 60 * 1000,
   });
 
-  const encrypted = CryptoJS.AES.encrypt(payload, CryptoJS.enc.Hex.parse(key), {
-    iv,
-    mode: CryptoJS.mode.GCM,
-    format: CryptoJS.format.OpenSSL,
-  });
+  const ciphertext = await crypto.subtle.encrypt(
+    { name: "AES-GCM", iv },
+    key,
+    encoder.encode(payload)
+  );
 
   return {
-    iv: iv.toString(CryptoJS.enc.Hex),
-    ciphertext: encrypted.ciphertext.toString(CryptoJS.enc.Hex),
-    salt: encrypted.salt?.toString(CryptoJS.enc.Hex) || "",
+    iv: toHex(iv.buffer),
+    ciphertext: toHex(ciphertext),
     expiresAt: Date.now() + ttlMinutes * 60 * 1000,
   };
 }
