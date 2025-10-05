@@ -25,7 +25,7 @@ async function getCryptoKey(secret: string, offset = 0, usage: KeyUsage[] = ["en
 
 // --- ENCRYPT ---
 export async function encryptPassword(password: string, ttlMinutes = 10) {
-  const secret = process.env.ENCRYPTION_BASE_SECRET || "fallback-secret";
+  const secret = import.meta.env.VITE_ENCRYPTION_BASE_SECRET || "fallback-secret";
   const key = await getCryptoKey(secret, 0, ["encrypt"]);
 
   const iv = crypto.getRandomValues(new Uint8Array(12)); // 96-bit nonce
