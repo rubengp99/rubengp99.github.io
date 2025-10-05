@@ -4,6 +4,18 @@ import { ExternalLink, Github, Star, GitBranch, Lock, Building2 } from 'lucide-r
 const Projects = () => {
   const projects = [
     {
+      title: 'Personal Website Backend',
+      company: 'Personal Project',
+      description:
+        'Built a secure Next.js backend hosted on Vercel to power personal portfolio services. Implemented strong authentication flows with AES-256-GCM password encryption, JWT-based sessions, and Google SMTP for transactional email delivery.',
+      image: 'https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=600',
+      technologies: ['Next.js', 'TypeScript', 'Node.js', 'JWT', 'AES-GCM', 'Google SMTP'],
+      github: 'https://github.com/rubengp99/vercel-serverless-backend',
+      demo: 'https://vercel-serverless-mailer.vercel.app/',
+      visibility: 'public',
+      stats: { stars: 'Auth', forks: 'Security' }
+    },
+    {
       title: 'Virtual Card Platform',
       company: "Cadana",
       description: 'Built and launched a comprehensive virtual card product with AML-focused fraud prevention rules, enhancing customer fund security and regulatory compliance.',
@@ -41,24 +53,44 @@ const Projects = () => {
       company: "Cadana",
       description: 'Optimized AWS infrastructure, cutting operational costs by 30% through DynamoDB optimization and architectural improvements while maintaining performance.',
       image: 'https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=600',
-      technologies: ['AWS', 'DynamoDB', 'Infrastructure as Code', 'Cost Optimization'],
+      technologies: ['AWS', 'Lambda', 'S3', 'DynamoDB', 'Infrastructure as Code', 'Cost Optimization'],
       github: null,
       demo: null,
       stats: { stars: '-30%', forks: 'Cost' },
       visibility: "private"
     },
     {
-      title: "CRM Platform",
-      company: "Somos Sistemas",
-      description:
-        "Built an intelligent CRM solution that unifies sales, finance, and inventory analytics — providing actionable insights and automated reports to optimize business performance.",
-      image:
-        "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=600",
-      technologies: ["Vue.js", "Vuex", "Node.js", "MySQL", "Material UI"],
-      github: "https://github.com/rubengp99/reporteador",
+      title: 'Admin Platform MVP',
+      company: 'Esusu',
+      description: 'Built an MVP admin platform to automate M2F (Move-to-File) review and monthly rent reporting workflows, improving efficiency across compliance and data teams.',
+      image: 'https://images.pexels.com/photos/1181345/pexels-photo-1181345.jpeg?auto=compress&cs=tinysrgb&w=600',
+      technologies: ['React', 'AWS', 'Automation'],
+      visibility: 'private',
+      github: null,
       demo: null,
-      stats: { stars: "CRM", forks: "Public" },
-      visibility: "public",
+      stats: { stars: 'Admin', forks: 'Automation' }
+    },
+    {
+      title: 'Automated Messaging Backend',
+      company: 'Esusu',
+      description: 'Designed and implemented an automated messaging backend for rent reporting and notifications, enabling event-driven communication pipelines and reliable delivery.',
+      image: 'https://images.pexels.com/photos/3184357/pexels-photo-3184357.jpeg?auto=compress&cs=tinysrgb&w=600',
+      technologies: ['Go', 'AWS SNS', 'AWS SQS', 'Twilio', 'Microservices', 'Messaging'],
+      visibility: 'private',
+      github: null,
+      demo: null,
+      stats: { stars: 'Backend', forks: 'Messaging' }
+    },
+    {
+      title: 'Business Intelligence CRM',
+      company: 'Somos Sistemas',
+      description: 'Developed a CRM platform enabling business intelligence with inventory insights, financial reports, and performance dashboards to support strategic decision-making.',
+      image: 'https://images.pexels.com/photos/669619/pexels-photo-669619.jpeg?auto=compress&cs=tinysrgb&w=600',
+      technologies: ['Vue', 'Vuex', 'Node.js', 'MySQL', 'BI', 'Analytics'],
+      github: 'https://github.com/rubengp99/reporteador',
+      visibility: 'public',
+      demo: null,
+      stats: { stars: 'CRM', forks: 'Analytics' }
     },
   ];
 
