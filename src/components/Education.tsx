@@ -1,7 +1,16 @@
 import React from 'react';
-import { GraduationCap, Calendar, MapPin } from 'lucide-react';
+import { GraduationCap, Calendar, MapPin, Download } from 'lucide-react';
 
 const Education = () => {
+  const handleDownload = () => {
+    // Replace this with your actual certificate file URL
+    const certificateUrl = "/EF _SET _Certificate.pdf";
+    const link = document.createElement("a");
+    link.href = certificateUrl;
+    link.download = "EF _SET _Certificate.pdf";
+    link.click();
+  };
+
   return (
     <section id="education" className="py-20 bg-gradient-to-br from-black to-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -53,11 +62,26 @@ const Education = () => {
               </div>
               <div>
                 <div className="flex justify-between items-center mb-2">
-                  <span className="text-white font-medium">English</span>
-                  <span className="text-gray-300 text-sm">Highly Proficient</span>
+                  <div className="flex items-center gap-2">
+                    <span className="text-white font-medium">English</span>
+                    {/* 📄 Download icon */}
+                    <button
+                      onClick={handleDownload}
+                      className="text-gray-300 hover:text-white transition-colors"
+                      title="Download EF Certificate"
+                    >
+                      <Download size={18} />
+                    </button>
+                  </div>
+
+                  <span className="text-gray-300 text-sm">Advanced (C1)</span>
                 </div>
+
                 <div className="w-full bg-gray-800 rounded-full h-2">
-                  <div className="h-2 rounded-full bg-gradient-to-r from-custom-purple-500 to-custom-purple-400" style={{ width: '90%' }}></div>
+                  <div
+                    className="h-2 rounded-full bg-gradient-to-r from-custom-purple-500 to-custom-purple-400"
+                    style={{ width: "90%" }}
+                  ></div>
                 </div>
               </div>
             </div>

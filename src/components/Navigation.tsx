@@ -15,8 +15,8 @@ const Navigation = () => {
 
   const handleDownloadCV = () => {
     const link = document.createElement('a');
-    link.href = '/Ruben_D_Garcia_Software_Engineer.pdf';
-    link.download = 'Ruben_D_Garcia_Software_Engineer';
+    link.href = '/Ruben_D_Garcia_Senior_Software_Engineer.pdf';
+    link.download = 'Ruben_D_Garcia_Senior_Software_Engineer';
     link.click();
   };
 
