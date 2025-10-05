@@ -23,7 +23,7 @@ const Experience = () => {
       title: 'Career Break',
       company: '',
       location: 'Nueva Esparta, Venezuela',
-      period: 'Dec 2024 - Present',
+      period: 'Dec 2024 - Aug 2025',
       description: 'After experiencing a significant burnout, I took a dedicated period of time to prioritize my physical and mental well-being, re-engage with my family, and explore personal growth outside my career.',
       summary: [],
       technologies: []
