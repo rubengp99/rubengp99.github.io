@@ -27,7 +27,7 @@ const Hero = () => {
       </div>
 
       <div className="text-center z-10 px-4">
-        <div className="mb-8">
+        <div className="mb-8 pt-20 md:pt-0">
           {/* Mobile (small) version */}
           <div className="inline-block md:hidden p-2 border border-custom-purple-500/30 rounded-md mb-4 bg-black/50 backdrop-blur-sm">
             <Terminal className="text-custom-purple-600" size={36} />
