@@ -1,7 +1,7 @@
 import React from 'react';
-import { 
-  Calendar, 
-  MapPin, 
+import {
+  Calendar,
+  MapPin,
   TrendingUp,
   Zap,            // ⚡ Optimized
   FlaskConical,   // 🧪 Testing framework
@@ -96,7 +96,7 @@ const Experience = () => {
               <div key={index} className="relative">
                 {/* Timeline Dot */}
                 <div className="absolute left-6 w-4 h-4 bg-gradient-to-r from-custom-purple-600 to-custom-purple-500 rounded-full border-4 border-black hidden md:block"></div>
-                
+
                 <div className="md:ml-16 bg-gray-900/50 border border-gray-700 rounded-lg p-8 hover:border-custom-purple-500/50 transition-all duration-300">
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                     <div>
@@ -160,8 +160,7 @@ const Experience = () => {
           <div className="bg-gradient-to-r from-custom-purple-600/10 to-custom-purple-500/10 border border-custom-purple-500/30 rounded-lg p-8 max-w-2xl mx-auto">
             <h3 className="text-2xl font-semibold text-white mb-4">What's Next?</h3>
             <p className="text-gray-300 text-lg">
-              Always looking for the next challenge to push the boundaries of technology 
-              and create solutions that make a real difference.
+              Always seeking bold challenges that push me to innovate and grow. I’m driven to build technology that scales, endures, and truly makes a difference — one system, one idea, one impact at a time.
             </p>
           </div>
         </div>

@@ -56,7 +56,7 @@ const Hero = () => {
 
         <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-8">
           <div className="text-gray-300 font-mono">
-            <span className="text-custom-cyan-600">languages:</span> [Go, React.js, Vue.js, Node.js, TypeScript, Python]
+            <span className="text-custom-cyan-600">languages:</span> [Go, AWS, React.js, Vue.js, Node.js, TypeScript, Python]
           </div>
           <div className="text-gray-300 font-mono">
             <span className="text-purple-600">experience:</span> 5+ years

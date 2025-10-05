@@ -137,11 +137,9 @@ const Skills = () => {
             </h3>
             <p className="text-gray-300 text-lg leading-relaxed">
               <span className="text-custom-cyan-600 font-mono">"</span>
-              Strong expertise in distributed systems, event-driven
-              architectures, and test-driven development. I focus on building
-              scalable, resilient systems with clean architecture and
-              infrastructure as code, ensuring alignment between technical
-              excellence and business objectives.
+              I specialize in designing and building <b>scalable, resilient distributed systems</b> grounded in <b>clean architecture</b> and <b>test-driven development</b>.
+              My focus is on creating <b>event-driven, asynchronous solutions</b> that balance <b>technical excellence with business impact</b> — systems that are robust, maintainable, and evolve gracefully under load.
+              I’m committed to delivering <b>high-quality, portable infrastructure</b> through infrastructure as code, ensuring consistency, observability, and smooth deployment across environments.
               <span className="text-custom-cyan-600 font-mono">"</span>
             </p>
           </div>

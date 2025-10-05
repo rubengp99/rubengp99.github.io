@@ -110,7 +110,10 @@ const Projects = () => {
 
         <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
-            <div key={index} className="group bg-gray-900/90 border border-gray-700 rounded-lg overflow-hidden hover:border-custom-purple-500/50 transition-all duration-300 transform hover:scale-105">
+            <div
+              key={index}
+              className="group bg-gray-900/90 border border-gray-700 rounded-lg overflow-hidden hover:border-custom-purple-500/50 transition-all duration-300 transform hover:scale-105 flex flex-col"
+            >
               <div className="relative overflow-hidden">
                 <img
                   src={project.image}
@@ -130,13 +133,14 @@ const Projects = () => {
                 </div>
               </div>
 
-              <div className="p-6">
+              {/* 👇 make this flex-col grow */}
+              <div className="p-6 flex flex-col flex-1">
                 <h3 className="text-xl font-bold text-white mb-3">{project.title}</h3>
                 <div className="flex items-center text-gray-400 text-sm mb-3">
                   <Building2 size={14} className="mr-2 text-custom-purple-600" />
                   {project.company}
                 </div>
-                <p className="text-gray-300 mb-4 leading-relaxed">{project.description}</p>
+                <p className="text-gray-300 mb-4 leading-relaxed flex-grow">{project.description}</p>
 
                 <div className="mb-6">
                   <div className="flex flex-wrap gap-2">
@@ -151,39 +155,43 @@ const Projects = () => {
                   </div>
                 </div>
 
-                {project.visibility === "public" ? (
-                  <div className="flex gap-4">
-                    {project.github && (
-                      <a
-                        href={project.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2 px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white rounded-lg transition-all duration-300 flex-1 justify-center"
-                      >
-                        <Github size={16} />
-                        Code
-                      </a>
-                    )}
-                    {project.demo && (
-                      <a
-                        href={project.demo}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-custom-purple-800 to-custom-cyan-700 hover:from-custom-cyan-700 hover:to-purple-700 text-white rounded-lg transition-all duration-300 flex-1 justify-center"
-                      >
-                        <ExternalLink size={16} />
-                        Demo
-                      </a>
-                    )}
-                  </div>
-                ) : (
-                  <div className="flex items-center justify-center gap-2 text-gray-400 border border-gray-700 rounded-lg py-2 bg-black/40">
-                    <Lock size={16} className="text-gray-500" />
-                    <span className="text-sm">Private Project (No public access)</span>
-                  </div>
-                )}
+                {/* 👇 always pinned to bottom */}
+                <div className="mt-auto pt-4 border-t border-gray-800">
+                  {project.visibility === "public" ? (
+                    <div className="flex gap-4">
+                      {project.github && (
+                        <a
+                          href={project.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2 px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white rounded-lg transition-all duration-300 flex-1 justify-center"
+                        >
+                          <Github size={16} />
+                          Code
+                        </a>
+                      )}
+                      {project.demo && (
+                        <a
+                          href={project.demo}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-custom-purple-800 to-custom-cyan-700 hover:from-custom-cyan-700 hover:to-purple-700 text-white rounded-lg transition-all duration-300 flex-1 justify-center"
+                        >
+                          <ExternalLink size={16} />
+                          Demo
+                        </a>
+                      )}
+                    </div>
+                  ) : (
+                    <div className="flex items-center justify-center gap-2 text-gray-400 border border-gray-700 rounded-lg py-2 bg-black/40">
+                      <Lock size={16} className="text-gray-500" />
+                      <span className="text-sm">Private Project (No public access)</span>
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
+
           ))}
         </div>
 

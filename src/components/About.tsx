@@ -24,14 +24,13 @@ const About = () => {
                 <span className="text-gray-300">{"{"}</span>
               </p>
               <p className="ml-4 mb-4">
-                Seasoned software engineer with 5+ years of experience specializing in Go and AWS.
-                I bring strong expertise in distributed systems, event-driven architectures, test-driven
-                development, CI/CD, and Infrastructure as Code.
+                I'm Ruben Garcia, a Senior Software Engineer with 5+ years of experience, expert in Go, AWS, and building scalable distributed systems with proficiency in ReactJS and
+                VueJS. Skilled in event-driven architectures, TDD, CI/CD, and Infrastructure as Code.
               </p>
               <p className="ml-4 mb-4">
-                With proven leadership and ownership skills, I've optimized cloud infrastructure,
-                mentored engineering teams, and delivered innovative fintech products. Previous exposure
-                includes fast-paced startups, full-stack development, and expertise with both SQL and NoSQL databases.
+                Proven leadership, strong communication, and ownership, with
+                a focus on delivering results in Fintech. Background includes full-stack development in fast-paced startups and working with SQL/NoSQL
+                databases.
               </p>
               <p className="text-gray-300">{"}"}</p>
             </div>
@@ -43,19 +42,19 @@ const About = () => {
               <h3 className="text-white font-semibold mb-2">Distributed Systems</h3>
               <p className="text-gray-300 text-sm">Building scalable microservices and event-driven architectures</p>
             </div>
-            
+
             <div className="bg-black/50 border border-purple-600/30 rounded-lg p-6 text-center hover:border-purple-500/60 transition-all duration-300">
               <Zap className="text-purple-600 mx-auto mb-3" size={32} />
               <h3 className="text-white font-semibold mb-2">Cloud Infrastructure</h3>
               <p className="text-gray-300 text-sm">AWS setup, optimization and cost reduction</p>
             </div>
-            
+
             <div className="bg-black/50 border border-green-500/30 rounded-lg p-6 text-center hover:border-green-500/60 transition-all duration-300">
               <Shield className="text-green-500 mx-auto mb-3" size={32} />
               <h3 className="text-white font-semibold mb-2">Test-Driven Development</h3>
               <p className="text-gray-300 text-sm">TDD first approach and custom testing frameworks</p>
             </div>
-            
+
             <div className="bg-black/50 border border-yellow-600/30 rounded-lg p-6 text-center hover:border-yellow-500/60 transition-all duration-300">
               <Cpu className="text-yellow-600 mx-auto mb-3" size={32} />
               <h3 className="text-white font-semibold mb-2">Leadership</h3>
