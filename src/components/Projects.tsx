@@ -4,6 +4,18 @@ import { ExternalLink, Github, Star, GitBranch, Lock, Building2 } from 'lucide-r
 const Projects = () => {
   const projects = [
     {
+      title: 'Go Pool',
+      company: 'Personal Project (Library)',
+      description:
+        'A high-performance generic goroutine pool in Go with minimal allocations, task retries, and flexible drain handling. Optimized for concurrent workloads without preallocating channels or knowing task count.',
+      image: 'gopoolbg.jpg',
+      technologies: ['Go', 'Concurrency', 'Generics', 'Task Pool', 'Memory Optimization'],
+      github: 'https://github.com/rubengp99/go-pool',
+      demo: null,
+      visibility: 'public',
+      stats: { stars: 'Go', forks: 'Pool' },
+    },
+    {
       title: 'Personal Website Backend',
       company: 'Personal Project',
       description:
