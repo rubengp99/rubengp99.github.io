@@ -13,64 +13,56 @@ import {
   Wrench,         // 🛠️ Admin UI
   ShieldCheck,    // 🛡️ Resiliency
   ClipboardList,  // 📋 Trello/Jira management
-  Cloud,          // ☁️ Cloud migration
-  Rocket          // 🚀 CRM/ERP extension
+  Rocket,          // 🚀 CRM/ERP extension
+  Eye
 } from 'lucide-react';
 
 const Experience = () => {
   const experiences = [
     {
-      title: 'Career Break',
-      company: '',
-      location: 'Nueva Esparta, Venezuela',
-      period: 'Dec 2024 - Aug 2025',
-      description: 'After experiencing a significant burnout, I took a dedicated period of time to prioritize my physical and mental well-being, re-engage with my family, and explore personal growth outside my career.',
-      summary: [],
-      technologies: []
-    },
-    {
       title: 'Lead Engineer (Full-Time)',
       company: 'Cadana',
       location: 'Remote',
-      period: 'Jun 2021 - Dec 2024',
-      description: 'Led engineering initiatives at a fintech startup, driving technical excellence and delivering innovative financial products.',
+      period: 'Jun 2021 - Jan 2025',
+      description: 'Led engineering initiatives at a fintech startup, driving technical excellence and delivering high-impact financial products.',
       summary: [
-        { icon: Zap, text: 'Optimized AWS usage, cutting costs by 30% through DynamoDB and architecture improvements' },
-        { icon: FlaskConical, text: 'Developed and implemented a custom business testing framework standardized across microservices' },
-        { icon: Users, text: 'Mentored junior engineers and ensured alignment between technical initiatives and business goals through stakeholder collaboration' },
-        { icon: CreditCard, text: 'Built and launched a virtual card product with AML-focused rules, enhancing fraud prevention and customer fund security' },
-        { icon: Globe, text: 'Delivered an end-to-end Web3 U.S. equity investment product, expanding the company\'s fintech capabilities' }
+        { icon: Zap, text: 'Cut AWS infrastructure costs by 30% through DynamoDB redesign, lifecycle management, and leveraging Graviton (ARM) Lambda functions' },
+        { icon: FlaskConical, text: 'Reduced core microservice response times by 20–70% using structured concurrency patterns and Go performance optimizations' },
+        { icon: Users, text: 'Mentored 2 engineers, establishing best practices in observability, distributed tracing, and performance profiling' },
+        { icon: CreditCard, text: 'Launched virtual card and Web3 equity investing products, handling thousands of concurrent transactions with AML compliance, increasing platform assets, wallet top-ups, and customer retention' },
+        { icon: Globe, text: 'Developed a custom Go-based integration testing framework across 30+ microservices, cutting release times by 40%' },
+        { icon: Eye, text: 'Enhanced system observability and incident response with PagerDuty, CloudWatch metrics, and structured logging pipelines' }
       ],
-      technologies: ['Go', 'Vue.js', 'Python', 'Node.js', 'AWS', 'S3', 'Kinesis', 'Lambda', 'IaC', 'TDD', 'CI/CD']
+      technologies: ['Go', 'Vue.js', 'Python', 'Node.js', 'AWS', 'S3', 'Kinesis', 'Lambda', 'IaC', 'TDD', 'CI/CD', 'Docker', 'PostgreSQL', 'MongoDB']
     },
     {
       title: 'Software Engineer (Full-Time)',
       company: 'Esusu',
       location: 'Remote',
       period: 'May 2020 - Jun 2021',
-      description: 'Developed scalable solutions for fintech platform focused on rent reporting and credit building.',
+      description: 'Developed scalable backend and admin solutions for a fintech platform focused on rent reporting and credit building.',
       summary: [
-        { icon: RefreshCw, text: 'Automated rent data ingestion from 4 real estate platforms, streamlining monthly reporting' },
-        { icon: MessageSquare, text: 'Developed internal messaging platform to improve customer communications and campaigns' },
-        { icon: Wrench, text: 'Built an MVP admin UI, reducing operations\' reliance on developers' },
-        { icon: ShieldCheck, text: 'Hardened platform resiliency with retry flows and optimized MongoDB cluster usage' }
+        { icon: RefreshCw, text: 'Accelerated monthly rent data reporting by 40% through automated ingestion pipelines across 4+ real estate APIs' },
+        { icon: MessageSquare, text: 'Built an automated backend messaging platform, reducing operational effort by 90% and increasing overall customer engagement from low levels to hundreds of interactions' },
+        { icon: Wrench, text: 'Developed a React-based MVP admin UI, cutting operations’ dependency on developers for multiple routine tasks' },
+        { icon: ShieldCheck, text: 'Improved platform resiliency with queue-based retry flows, exponential backoff, and optimized MongoDB cluster usage' }
       ],
-      technologies: ['Go', 'React.js', 'Node.js', 'MongoDB', 'TypeScript', 'AWS', 'S3', 'Kinesis', 'Lambda', 'IaC']
+      technologies: ['Go', 'React.js', 'Node.js', 'MongoDB', 'TypeScript', 'AWS', 'S3', 'Kinesis', 'Lambda', 'IaC', 'Docker', 'CI/CD']
     },
     {
-      title: 'Project Manager (Contract)',
+      title: 'Project Manager (Part-Time)',
       company: 'Somos Sistemas',
-      location: 'Nueva Esparta, Venezuela',
+      location: 'Hybrid, Venezuela',
       period: 'Feb 2020 - Aug 2020',
-      description: 'Led cloud migration and product development initiatives for ERP solutions.',
+      description: 'Led cloud migration and ERP product development initiatives, improving deployment efficiency and database management.',
       summary: [
-        { icon: ClipboardList, text: 'Managed Trello/Jira boards and configured core hosting rules, streamlining operations and ensuring product performance' },
-        { icon: Cloud, text: 'Directed cloud migration from on-premises to cloud hosting, improving scalability, reliability, and maintenance' },
-        { icon: Rocket, text: 'Led the team to design and implement a CRM extension of the ERP product in 2 months, enabling organization-wide business intelligence and accelerating data-driven decision-making' }
+        { icon: ClipboardList, text: 'Cut deployment and client onboarding time by 50% and improved database update pipelines by implementing self-hosted tenancy management in a centralized VPC environment' },
+        { icon: Rocket, text: 'Delivered a CRM analytics module within 8 weeks, enabling organization-wide KPI tracking and sales forecasting' }
       ],
       technologies: ['Vue.js', 'Node.js', 'TypeScript', 'MySQL', 'Project Management', 'Cloud Migration', 'ERP', 'CRM']
     }
   ];
+
 
   return (
     <section id="experience" className="py-20 bg-gradient-to-br from-gray-900 to-black">

@@ -29,25 +29,29 @@ const Projects = () => {
     },
     {
       title: 'Virtual Card Platform',
-      company: "Cadana",
-      description: 'Built and launched a comprehensive virtual card product with AML-focused fraud prevention rules, enhancing customer fund security and regulatory compliance.',
+      company: 'Cadana',
+      description: (
+        <>Built and launched a virtual card product with AML-focused fraud prevention rules, enhancing customer fund security and regulatory compliance. Leveraged <a href="https://www.rain.xyz" target="_blank" rel="noopener noreferrer" className="text-cyan-400 underline">rain.xyz</a> APIs for card issuance and transaction processing.</>
+      ),
       image: 'https://images.pexels.com/photos/50987/money-card-business-credit-card-50987.jpeg?auto=compress&cs=tinysrgb&w=600',
       technologies: ['Go', 'AWS', 'DynamoDB', 'Microservices', 'AML'],
       github: null,
       demo: null,
       stats: { stars: 'Fintech', forks: 'Production' },
-      visibility: "private"
+      visibility: 'private',
     },
     {
       title: 'Web3 Equity Investment',
-      company: "Cadana",
-      description: 'Delivered an end-to-end Web3 U.S. equity investment product, expanding fintech capabilities and bridging traditional finance with blockchain technology.',
+      company: 'Cadana',
+      description: (
+        <>Delivered an end-to-end Web3 U.S. equity investment product, expanding fintech capabilities and scaling to handle thousands of concurrent transactions. Integrated <a href="https://www.dinari.com" target="_blank" rel="noopener noreferrer" className="text-cyan-400 underline">dinari.com</a> APIs to power blockchain-based trading and settlement.</>
+      ),
       image: 'https://images.pexels.com/photos/730564/pexels-photo-730564.jpeg?auto=compress&cs=tinysrgb&w=600',
       technologies: ['Go', 'Web3', 'AWS', 'Microservices', 'TDD'],
       github: null,
       demo: null,
       stats: { stars: 'Web3', forks: 'Live' },
-      visibility: "private"
+      visibility: 'private',
     },
     {
       title: 'Business Testing Framework',
