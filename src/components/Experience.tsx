@@ -33,7 +33,7 @@ const Experience = () => {
         { icon: Globe, text: 'Developed a custom Go-based integration testing framework across 30+ microservices, cutting release times by 40%' },
         { icon: Eye, text: 'Enhanced system observability and incident response with PagerDuty, CloudWatch metrics, and structured logging pipelines' }
       ],
-      technologies: ['Go', 'Vue.js', 'Python', 'Node.js', 'AWS', 'S3', 'Kinesis', 'Lambda', 'IaC', 'TDD', 'CI/CD', 'Docker', 'PostgreSQL', 'MongoDB']
+      technologies: ['Golang', 'Python', 'JavaScript', 'NodeJS', 'TypeScript', 'VueJS', 'AWS (Lambda, S3, SNS, SQS, Kinesis, DynamoDB, Athena, CloudFormation, EC2)', 'Docker', 'NodeJS', 'TypeScript', 'VueJS', 'PostgreSQL', 'RDS', 'GitHub Actions', 'Zappier']
     },
     {
       title: 'Software Engineer (Full-Time)',
@@ -47,10 +47,10 @@ const Experience = () => {
         { icon: Wrench, text: 'Developed a React-based MVP admin UI, cutting operations’ dependency on developers for multiple routine tasks' },
         { icon: ShieldCheck, text: 'Improved platform resiliency with queue-based retry flows, exponential backoff, and optimized MongoDB cluster usage' }
       ],
-      technologies: ['Go', 'React.js', 'Node.js', 'MongoDB', 'TypeScript', 'AWS', 'S3', 'Kinesis', 'Lambda', 'IaC', 'Docker', 'CI/CD']
+      technologies: ['Golang', 'JavaScript', 'NodeJS', 'TypeScript', 'ReactJS', 'AWS (Lambda, S3, SNS, SQS, CloudFormation, EC2, Lex)', 'Docker', 'MongoDB', 'PostgreSQL', 'GitHub Actions']
     },
     {
-      title: 'Project Manager (Part-Time)',
+      title: 'Project Manager & DevOps Engineer (Part-Time)',
       company: 'Somos Sistemas',
       location: 'Hybrid, Venezuela',
       period: 'Feb 2020 - Aug 2020',
@@ -59,7 +59,7 @@ const Experience = () => {
         { icon: ClipboardList, text: 'Cut deployment and client onboarding time by 50% and improved database update pipelines by implementing self-hosted tenancy management in a centralized VPC environment' },
         { icon: Rocket, text: 'Delivered a CRM analytics module within 8 weeks, enabling organization-wide KPI tracking and sales forecasting' }
       ],
-      technologies: ['Vue.js', 'Node.js', 'TypeScript', 'MySQL', 'Project Management', 'Cloud Migration', 'ERP', 'CRM']
+      technologies: ['Golang', 'NGINX', 'Docker', 'NodeJS', 'TypeScript', 'VueJS', 'MongoDB', 'PostgreSQL', 'RDS', 'GitHub Actions']
     }
   ];
 
