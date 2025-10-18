@@ -63,10 +63,12 @@
 /* Apply globally */
 html, body {
   font-family: 'Roboto', sans-serif;
+  transition: font-family 0.3s ease; /* Smooth transition for font loading */
 }
 
 .posver-futuristic {
   font-family: 'Posver', sans-serif;
+  transition: font-family 0.3s ease; /* Smooth transition for font loading */
 }
 
 /* Custom Matrix Background Animation */
