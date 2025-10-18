@@ -22,7 +22,7 @@ function App() {
         {/* Main Content */}
         <div className="relative z-10">
           <Navigation />
-          <ParallaxWrapper backgroundVideo='parallax' fallbackImage="parallax.png">
+          <ParallaxWrapper backgroundVideo='parallax' fallbackImage="parallax.webp">
             <Hero />
             <About />
             <Skills />
