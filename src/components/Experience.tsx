@@ -14,16 +14,17 @@ import {
   ShieldCheck,    // 🛡️ Resiliency
   ClipboardList,  // 📋 Trello/Jira management
   Rocket,          // 🚀 CRM/ERP extension
-  Eye
+  Eye,
+  ExternalLink
 } from 'lucide-react';
 
 const Experience = () => {
   const experiences = [
     {
       title: 'Lead Engineer (Full-Time)',
-      company: 'Cadana',
+      company: (<><a href="https://cadanapay.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">Cadana <ExternalLink size={16} /></a></>),
       location: 'Remote',
-      period: 'Jun 2021 - Jan 2025',
+      period: 'Jun 2021 - Feb 2025',
       description: 'Led engineering initiatives at a fintech startup, driving technical excellence and delivering high-impact financial products.',
       summary: [
         { icon: Zap, text: 'Cut AWS infrastructure costs by 30% through DynamoDB redesign, lifecycle management, and leveraging Graviton (ARM) Lambda functions' },
@@ -33,11 +34,11 @@ const Experience = () => {
         { icon: Globe, text: 'Developed a custom Go-based integration testing framework across 30+ microservices, cutting release times by 40%' },
         { icon: Eye, text: 'Enhanced system observability and incident response with PagerDuty, CloudWatch metrics, and structured logging pipelines' }
       ],
-      technologies: ['Golang', 'Python', 'JavaScript', 'NodeJS', 'TypeScript', 'VueJS', 'AWS (Lambda, S3, SNS, SQS, Kinesis, DynamoDB, Athena, CloudFormation, EC2)', 'Docker', 'NodeJS', 'TypeScript', 'VueJS', 'PostgreSQL', 'RDS', 'GitHub Actions', 'Zappier']
+      technologies: ['Golang', 'Python', 'JavaScript', 'NodeJS', 'TypeScript', 'VueJS', 'AWS (Lambda, S3, SNS, SQS, Kinesis, DynamoDB, Athena, CloudFormation, EC2)', 'Docker', 'VueJS', 'PostgreSQL', 'RDS', 'GitHub Actions', 'Zappier']
     },
     {
       title: 'Software Engineer (Full-Time)',
-      company: 'Esusu',
+      company: (<><a href="https://esusurent.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">Esusu <ExternalLink size={16} /></a></>),
       location: 'Remote',
       period: 'May 2020 - Jun 2021',
       description: 'Developed scalable backend and admin solutions for a fintech platform focused on rent reporting and credit building.',
@@ -51,9 +52,9 @@ const Experience = () => {
     },
     {
       title: 'Project Manager & DevOps Engineer (Part-Time)',
-      company: 'Somos Sistemas',
+      company: (<><a href="https://somossistemas.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">Somos Sistemas <ExternalLink size={16} /></a></>),
       location: 'Hybrid, Venezuela',
-      period: 'Feb 2020 - Aug 2020',
+      period: 'Sep 2019 - May 2020',
       description: 'Led cloud migration and ERP product development initiatives, improving deployment efficiency and database management.',
       summary: [
         { icon: ClipboardList, text: 'Cut deployment and client onboarding time by 50% and improved database update pipelines by implementing self-hosted tenancy management in a centralized VPC environment' },
@@ -93,7 +94,7 @@ const Experience = () => {
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                     <div>
                       <h3 className="text-2xl font-bold text-white mb-2">{exp.title}</h3>
-                      <h4 className="text-xl text-custom-purple-500 mb-2">{exp.company}</h4>
+                      <h4 className="text-xl text-custom-cyan-700 mb-2">{exp.company}</h4>
                     </div>
                     <div className="flex flex-col md:text-right space-y-1">
                       <div className="flex items-center text-gray-300">
