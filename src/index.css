@@ -12,14 +12,6 @@
     font-display: swap;
 }
 
-@font-face {
-    font-family: 'Roboto';
-    src: url('/fonts/Roboto/Roboto-BlackItalic.woff2') format('woff2'),
-        url('/fonts/Roboto/Roboto-BlackItalic.woff') format('woff');
-    font-weight: 900;
-    font-style: italic;
-    font-display: swap;
-}
 
 @font-face {
     font-family: 'Roboto';
@@ -27,51 +19,6 @@
         url('/fonts/Roboto/Roboto-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Roboto';
-    src: url('/fonts/Roboto/Roboto-LightItalic.woff2') format('woff2'),
-        url('/fonts/Roboto/Roboto-LightItalic.woff') format('woff');
-    font-weight: 300;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Roboto';
-    src: url('/fonts/Roboto/Roboto-Light.woff2') format('woff2'),
-        url('/fonts/Roboto/Roboto-Light.woff') format('woff');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Roboto';
-    src: url('/fonts/Roboto/Roboto-Italic.woff2') format('woff2'),
-        url('/fonts/Roboto/Roboto-Italic.woff') format('woff');
-    font-weight: normal;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Roboto';
-    src: url('/fonts/Roboto/Roboto-BoldItalic.woff2') format('woff2'),
-        url('/fonts/Roboto/Roboto-BoldItalic.woff') format('woff');
-    font-weight: bold;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Roboto';
-    src: url('/fonts/Roboto/Roboto-MediumItalic.woff2') format('woff2'),
-        url('/fonts/Roboto/Roboto-MediumItalic.woff') format('woff');
-    font-weight: 500;
-    font-style: italic;
     font-display: swap;
 }
 
@@ -95,15 +42,6 @@
 
 @font-face {
     font-family: 'Roboto';
-    src: url('/fonts/Roboto/Roboto-ThinItalic.woff2') format('woff2'),
-        url('/fonts/Roboto/Roboto-ThinItalic.woff') format('woff');
-    font-weight: 100;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Roboto';
     src: url('/fonts/Roboto/Roboto-Regular.woff2') format('woff2'),
         url('/fonts/Roboto/Roboto-Regular.woff') format('woff');
     font-weight: normal;
@@ -121,33 +59,6 @@
     font-display: swap;
 }
 
-@font-face {
-    font-family: 'Posver';
-    src: url('/fonts/Posver futuristic/Posver.woff2') format('woff2'),
-        url('/fonts/Posver futuristic/Posver.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Posver';
-    src: url('/fonts/Posver futuristic/Posver.woff2') format('woff2'),
-        url('/fonts/Posver futuristic/Posver.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Posver';
-    src: url('/fonts/Posver futuristic/Posver.woff2') format('woff2'),
-        url('/fonts/Posver futuristic/Posver.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
 
 /* Apply globally */
 html, body {
@@ -155,7 +66,7 @@ html, body {
 }
 
 .posver-futuristic {
-  font-family: 'Posver', 'Roboto', sans-serif;
+  font-family: 'Posver', sans-serif;
 }
 
 /* Custom Matrix Background Animation */
